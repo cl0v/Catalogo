@@ -1,32 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:nutri/models/product_model.dart';
 
 class ItemWidget extends StatefulWidget {
-  final Function(int) onChanged;
+  final ProductModel product;
+  final Function(ProductModel, int) onAmountChanged;
 
-  const ItemWidget({Key? key, required this.onChanged}) : super(key: key);
+  const ItemWidget({
+    Key? key,
+    required this.onAmountChanged,
+    required this.product,
+  }) : super(key: key);
 
   @override
   _ItemWidgetState createState() => _ItemWidgetState();
 }
 
 class _ItemWidgetState extends State<ItemWidget> {
-  
   int amount = 0;
-  int value = 100;
+
+
 
   remove() {
+    if (amount <= 0) return;
     setState(() {
-      if (amount > 0) amount--;
+      amount--;
     });
-    widget.onChanged(-value);
+    widget.onAmountChanged(widget.product, amount);
   }
 
   add() {
     setState(() {
       amount++;
     });
-    widget.onChanged(value);
-
+    widget.onAmountChanged(widget.product, amount);
   }
 
   @override
@@ -41,14 +47,14 @@ class _ItemWidgetState extends State<ItemWidget> {
           flex: 1,
         ),
         Expanded(
-          child: Text('Narra chocolate (R\$99,90)'),
+          child: Text('${widget.product.title} (R\$${widget.product.value})'),
           flex: 3,
         ),
         // TODO: Limitar a barrinha para ficar sempre o mesmo espaçamento, de 4 digitos +rs
         ButtonBar(
           children: [
             IconButton(onPressed: remove, icon: Icon(Icons.remove)),
-            Text('R\$' + (value * amount).toString()),
+            Text('R\$' + (widget.product.value * amount).toStringAsFixed(2)),
             IconButton(onPressed: add, icon: Icon(Icons.add)),
           ],
         )

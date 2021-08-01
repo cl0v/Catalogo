@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:nutri/pages/products_page.dart';
+import 'package:nutri/pages/catalog_page.dart';
 
 import 'app.dart';
+//https://www.youtube.com/watch?v=CAYa9AQGtdU hosting deploy
 
+
+// Terminar de testar o envio do link e abrir o link na página da order
 
 // A pessoa recebe um link catalogo.com/pedidos/iddopedidoaqui
 // Quando a pessoa abre um link mostra uma nota falando o que a pessoa escolheu
