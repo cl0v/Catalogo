@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:nutri/features/order/widgets/confirmation_button.dart';
+import 'package:nutri/features/product_catalog/widgets/item_widget.dart';
 import 'package:nutri/models/product_model.dart';
 import 'package:nutri/models/product_order_model.dart';
 import 'package:nutri/repositories/order_repository.dart';
 import 'package:nutri/services/final_value_calculator_service.dart';
 import 'package:nutri/services/whatsapp_launcher_service.dart';
-import 'package:nutri/widgets/item_widget.dart';
 
 final productList = [
   ProductModel(title: 'Naara chocolate', value: 149.9),
@@ -81,11 +82,7 @@ class _CatalogPageState extends State<CatalogPage> {
               ]),
         )),
         floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-        floatingActionButton: FloatingActionButton.extended(
-          label: Text('Entrar em contato'),
-          icon: Icon(Icons.send),
-          onPressed: onSubmit,
-        ),
+        floatingActionButton: ConfirmationButton(),
         body: ListView(
           children: productList
               .map((p) => ItemWidget(
