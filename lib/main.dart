@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nutri/pages/catalog_page.dart';
 
 import 'app.dart';
 //https://www.youtube.com/watch?v=CAYa9AQGtdU hosting deploy

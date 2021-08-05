@@ -1,7 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:nutri/features/catalog/pages/catalog_page.dart';
 import 'package:nutri/pages/order_viewer_page.dart';
-import 'package:nutri/pages/catalog_page.dart';
 
 var rootHandler =
     Handler(handlerFunc: (BuildContext? context, Map<String, dynamic> params) {

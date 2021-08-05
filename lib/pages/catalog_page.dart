@@ -1,20 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nutri/features/order/widgets/confirmation_button.dart';
-import 'package:nutri/features/product_catalog/widgets/item_widget.dart';
 import 'package:nutri/models/product_model.dart';
 import 'package:nutri/models/product_order_model.dart';
 import 'package:nutri/repositories/order_repository.dart';
 import 'package:nutri/services/final_value_calculator_service.dart';
 import 'package:nutri/services/whatsapp_launcher_service.dart';
 
-final productList = [
-  ProductModel(title: 'Naara chocolate', value: 149.9),
-  ProductModel(title: 'Naara manga', value: 39.9),
-  ProductModel(title: 'Naara vanilla', value: 22.9),
-  ProductModel(title: 'Naara chocolate', value: 149.9),
-  ProductModel(title: 'Naara chocolate', value: 149.9),
-  ProductModel(title: 'Naara chocolate', value: 149.9),
-];
 
 final productOrderList = <ProductOrder>[];
 
@@ -84,12 +74,12 @@ class _CatalogPageState extends State<CatalogPage> {
         floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
         floatingActionButton: ConfirmationButton(),
         body: ListView(
-          children: productList
-              .map((p) => ItemWidget(
-                    onAmountChanged: onProductAmountChanged,
-                    product: p,
-                  ))
-              .toList(),
+          // children: productList
+          //     .map((p) => ItemWidget(
+          //           onAmountChanged: onProductAmountChanged,
+          //           product: p,
+          //         ))
+          //     .toList(),
         ));
   }
 }
