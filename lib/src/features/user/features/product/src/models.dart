@@ -4,6 +4,8 @@ class ProductModel {
   /// Titulo do produto
   String title;
 
+  //available
+
   /// Preço do produto
   num price;
 

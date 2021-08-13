@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:nutri/src/features/user/features/cart/src/controller.dart';
-import 'package:nutri/src/features/user/features/order/bloc/order_bloc.dart';
 import 'package:nutri/src/features/user/features/order/export.dart';
 import 'package:nutri/src/features/user/features/product/export.dart';
 import 'package:nutri/src/features/user/providers/user_provider.dart';

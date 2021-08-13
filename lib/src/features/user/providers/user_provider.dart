@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nutri/src/features/user/features/cart/src/controller.dart';
-import 'package:nutri/src/features/user/features/order/bloc/order_bloc.dart';
 import 'package:nutri/src/features/user/features/order/export.dart';
 import 'package:nutri/src/features/user/features/product/export.dart';
 import 'package:nutri/src/features/user/repositories/user_repository.dart';
@@ -13,8 +12,9 @@ class UserProvider extends InheritedWidget {
     required this.cartController,
     this.orderRepository,
     this.productRepository,
-    // required this.orderBloc,
   }) : super(child: child);
+
+  //A vantagem dessas coisas no provider é que posso injetar o dado fake em toda a arvore
 
   final IUserRepository userRepository;
   //TODO: Avaliar a necessidade desse carinha
@@ -26,8 +26,6 @@ class UserProvider extends InheritedWidget {
 
   final String uid;
 
-  /// Caso haja qualquer ordem na tela, será necessario informar o bloc de order
-  // final IOrderBloc orderBloc;
 
   @override
   bool updateShouldNotify(covariant InheritedWidget oldWidget) {

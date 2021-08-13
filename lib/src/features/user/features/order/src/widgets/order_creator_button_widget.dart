@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nutri/src/features/user/features/cart/src/controller.dart';
-import 'package:nutri/src/features/user/features/order/bloc/order_bloc.dart';
 import 'package:nutri/src/features/user/models/user_model.dart';
 import 'package:nutri/src/features/user/providers/user_provider.dart';
 import 'package:nutri/src/services/whatsapp_launcher.dart';
