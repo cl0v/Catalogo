@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/create_product_button_widget.dart';
+
+import '../widgets.dart';
 
 class CreateProductPage extends StatelessWidget {
   final TextEditingController titleController = TextEditingController();

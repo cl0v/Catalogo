@@ -1,11 +1,10 @@
 /// Usuario que irá cadastrar a sua loja
 class UserModel {
   /// Usado para armazenar o id do usuário;
-  String? id;
+  String? documentPath;
 
   /// Aparece na appbar
   /// - Nao pedir o nome completo da pessoa, apenas o que ela quiser preencher, depois eu removo a info de uma identidade com leitor de imagens;
-  // (Para treinar basta criar um app que le os valores dos documentos de identidade e mostre em formato de texto para a pessoa usar se por acaso precisar ...)
   final String nome;
 
   /// Telefone de contato para receber mensagem por whatsapp
@@ -21,7 +20,7 @@ class UserModel {
     this.nome,
     this.phone,
     this.email, {
-    this.id,
+    this.documentPath,
   });
 
   Map<String, dynamic> toMap() {
@@ -32,22 +31,22 @@ class UserModel {
     };
   }
 
-  factory UserModel.fromMap(String id, Map<String, dynamic> map) {
+  factory UserModel.fromMap(String documentPath, Map<String, dynamic> map) {
     return UserModel(
       map['nome'],
       map['phone'],
       map['email'],
-      id: id
+      documentPath: documentPath
     );
   }
 }
 
 final userList = <UserModel>[
   UserModel('livia amanda viana do bem', '40',
-      'liviaavb@yahoo.com', id: 'sdayuidashisdaiuh', ),
+      'liviaavb@yahoo.com', documentPath: 'sdayuidashisdaiuh', ),
   UserModel(
-       'marcelo viana', '23', 'marcelofv12@hotmail.com', id: 'sdayuidashisdaiuh',),
-  UserModel('Maryanne Soares', '29', null, id: 'sdayuidashisdaiuh', ),
+       'marcelo viana', '23', 'marcelofv12@hotmail.com', documentPath: 'sdayuidashisdaiuh',),
+  UserModel('Maryanne Soares', '29', null, documentPath: 'sdayuidashisdaiuh', ),
 ];
 
 /*

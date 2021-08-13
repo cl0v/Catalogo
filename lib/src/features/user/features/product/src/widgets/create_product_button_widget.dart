@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nutri/src/features/user/providers/user_provider.dart';
-import '../models/product_model.dart';
-import '../repositories/product_repository.dart';
+import '../models.dart';
+import '../repository.dart';
 
 class CreateProductButtonWidget extends StatelessWidget {
   const CreateProductButtonWidget({

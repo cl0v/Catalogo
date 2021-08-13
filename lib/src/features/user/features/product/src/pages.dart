@@ -1,0 +1,1 @@
+export 'pages/create_product_page.dart';

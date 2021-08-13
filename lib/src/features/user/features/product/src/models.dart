@@ -12,9 +12,9 @@ class ProductModel {
 
   ProductModel(
     this.title,
-    this.price,
-    [this.desc,]
-  );
+    this.price, [
+    this.desc,
+  ]);
 
   Map<String, dynamic> toMap() {
     return {
@@ -53,4 +53,27 @@ class ProductModel {
   @override
   String toString() =>
       'ProductModel(title: $title, price: $price, desc: $desc)';
+}
+
+class ProductCounterModel extends ProductModel {
+  int amount;
+
+  ProductCounterModel(String title, num price, [this.amount = 0])
+      : super(title, price);
+
+  Map<String, dynamic> toMap() {
+    return {
+      'title': title,
+      'price': price,
+      'amount': amount,
+    };
+  }
+
+  factory ProductCounterModel.fromMap(Map<String, dynamic> map) {
+    return ProductCounterModel(
+      map['title'],
+      map['price'],
+      map['amount'],
+    );
+  }
 }

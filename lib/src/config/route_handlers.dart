@@ -1,9 +1,10 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:nutri/src/features/user/features/order/pages/order_page.dart';
-import 'package:nutri/src/features/user/features/product/pages/create_product_page.dart';
+import 'package:nutri/src/features/user/features/order/export.dart';
+import 'package:nutri/src/features/user/features/product/export.dart';
 import 'package:nutri/src/pages/admin/admin_dashboard_page.dart';
 import 'package:nutri/src/pages/home_page.dart';
+import 'package:nutri/src/pages/order_page.dart';
 import 'package:nutri/src/pages/store_page.dart';
 
 Handler handler(Widget page) =>

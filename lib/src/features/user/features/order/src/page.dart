@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nutri/src/features/user/features/order/models/order_reader_model.dart';
-import 'package:nutri/src/features/user/features/order/repositories/order_repository.dart';
+import 'models.dart';
+import 'repository.dart';
+
+//TODO: Implement OrderPage
 
 class OrderPage extends StatelessWidget {
   const OrderPage(
@@ -13,15 +15,15 @@ class OrderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     print(id);
     return Scaffold(
-      body: FutureBuilder<OrderReaderModel>(
-        future: OrderRepository().reader.read(id),
+      body: FutureBuilder<OrderModel>(
+        future: FakeOrderRepository().reader.read(id),
         builder: (context, snapshot) {
           if (!snapshot.hasData || snapshot.data == null)
             return Center(
               child: CircularProgressIndicator(),
             );
           print(snapshot.data!.toString());
-          return Container();
+          return Container(child: Text('Porra bro'),);
         },
       ),
     );

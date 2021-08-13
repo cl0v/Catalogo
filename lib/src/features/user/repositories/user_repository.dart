@@ -1,5 +1,4 @@
-import 'package:nutri/src/features/user/services/create_user_service.dart';
-import '../services/read_user_service.dart';
+import 'package:nutri/src/features/user/services/user_services.dart';
 
 abstract class IUserRepository {
   /// Cadastra o usuario no servidor

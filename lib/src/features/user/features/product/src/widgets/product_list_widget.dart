@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nutri/src/features/user/features/product/models/product_model.dart';
-import 'package:nutri/src/features/user/features/product/repositories/product_repository.dart';
 import 'package:nutri/src/features/user/providers/user_provider.dart';
 
+import '../models.dart';
+import '../repository.dart';
 import 'product_amount_selector_widget.dart';
 
 class ProductListWidget extends StatefulWidget {
@@ -28,8 +28,8 @@ class _ProductListWidgetState extends State<ProductListWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<List<ProductModel>>(
-        stream: repository.reader.readAll(uid),
+    return FutureBuilder<List<ProductModel>>(
+        future: repository.reader.read(uid),
         builder: (context, snapshot) {
           if (!snapshot.hasData)
             return Center(
