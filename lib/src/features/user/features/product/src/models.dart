@@ -4,10 +4,11 @@ class ProductModel {
   /// Titulo do produto
   String title;
 
-  //available
+  //TODO: Implement availability
 
+//TODO: Conferir se sempre vai ser double
   /// Preço do produto
-  num price;
+  double price; 
 
   /// Breve descrição sobre o produto
   String? desc;
@@ -60,7 +61,7 @@ class ProductModel {
 class ProductCounterModel extends ProductModel {
   int amount;
 
-  ProductCounterModel(String title, num price, [this.amount = 0])
+  ProductCounterModel(String title, double price, [this.amount = 0])
       : super(title, price);
 
   Map<String, dynamic> toMap() {

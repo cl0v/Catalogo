@@ -1,9 +1,16 @@
+
 import 'package:flutter/material.dart';
-import 'package:nutri/src/features/user/providers/user_provider.dart';
+import 'package:nutri/src/features/user/src/providers.dart';
 
 import '../models.dart';
 import '../repository.dart';
-import 'product_amount_selector_widget.dart';
+import '../widgets.dart';
+
+// TODO: Usar as 3 páginas para criar a lista de itens, abaixo do preço e quantidade terá um botao colado no outro de (-/+)
+
+//https://github.com/MarceloFV/Flutter-Custom-Animation-Grocery-App/blob/master/lib/screens/home/components/cart_details_view.dart
+//https://github.com/MarceloFV/Flutter-Custom-Animation-Grocery-App/blob/master/lib/screens/home/components/cart_detailsview_card.dart
+//https://github.com/MarceloFV/Flutter-Custom-Animation-Grocery-App/blob/master/lib/components/price.dart
 
 class ProductListWidget extends StatefulWidget {
   ProductListWidget({
@@ -48,13 +55,9 @@ class _ProductListWidgetState extends State<ProductListWidget> {
             itemCount: list.length,
             itemBuilder: (context, index) {
               final ProductModel product = list[index];
-              return ProductAmountSelectorWidget(
+              return ProductWidget(
                 product: product,
               );
-              // return ListTile(
-              //   title: Text(product.title),
-              //   trailing: Text(product.price.toString()),
-              // );
             },
           );
         });

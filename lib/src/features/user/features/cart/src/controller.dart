@@ -1,6 +1,6 @@
 // //TODO: Todo o bloc de order vai se tornar o controller do cart
 // //O cart na verdade pode ser uma wishlist do product
-import 'package:nutri/src/features/user/features/order/export.dart';
+import 'package:nutri/src/features/user/features/order/order.dart';
 import 'package:nutri/src/features/user/features/product/src/models.dart';
 
 //O mais correto é caracterizar esse cara como bloc

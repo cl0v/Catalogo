@@ -1,5 +1,5 @@
 
-import 'package:nutri/src/features/user/features/product/export.dart';
+import 'package:nutri/src/features/user/features/product/product.dart';
 
 class OrderModel {
   List<ProductCounterModel> data;

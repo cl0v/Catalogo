@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:nutri/src/constants.dart';
 import 'package:nutri/src/features/user/features/cart/src/controller.dart';
-import 'package:nutri/src/features/user/models/user_model.dart';
-import 'package:nutri/src/features/user/providers/user_provider.dart';
-import 'package:nutri/src/services/whatsapp_launcher.dart';
+import 'package:nutri/src/features/user/src/models.dart';
+import 'package:nutri/src/features/user/src/providers.dart';
 
 import '../repository.dart';
 
 class OrderCreatorButtonWidget extends StatelessWidget {
-  final WhatsappMessageLauncherService launcher;
-
-  const OrderCreatorButtonWidget({Key? key, required this.launcher})
-      : super(key: key);
 
   onPressed(context) async {
     final UserProvider provider = UserProvider.of(context);
@@ -23,13 +19,13 @@ class OrderCreatorButtonWidget extends StatelessWidget {
     final orderId =
         await repository.creator.create(user.documentPath!, controller.order);
 
-    launcher.launchOrder(user.phone, orderId);
   }
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton.extended(
       icon: Icon(Icons.send),
+      backgroundColor: primaryColor,
       label: Text('Finalizar pedido'),
       onPressed: () => onPressed(context),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nutri/src/features/user/providers/user_provider.dart';
+import 'package:nutri/src/features/user/src/providers.dart';
 
 class AddToCartButtonWidget extends StatelessWidget {
   const AddToCartButtonWidget({Key? key}) : super(key: key);
@@ -10,9 +10,16 @@ class AddToCartButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
+    return MaterialButton(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(15.0),
+              topRight: Radius.circular(15.0)),
+        ),
+       color: Colors.green[600],
       onPressed: () => onPressed(context),
-      icon: Icon(Icons.add),
+      child: Container(child: Icon(Icons.add, color: Colors.white,), ),
+      
     );
   }
 }

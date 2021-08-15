@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nutri/src/features/user/providers/user_provider.dart';
+import 'package:nutri/src/features/user/src/providers.dart';
 import '../models.dart';
 import '../repository.dart';
 

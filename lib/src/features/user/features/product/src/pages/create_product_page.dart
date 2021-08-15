@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../widgets.dart';
 
 class CreateProductPage extends StatelessWidget {
+
+  
   final TextEditingController titleController = TextEditingController();
   final TextEditingController valueController = TextEditingController();
   final TextEditingController storeIdController = TextEditingController();
