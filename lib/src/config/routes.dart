@@ -4,7 +4,7 @@ import 'package:nutri/src/config/route_handlers.dart';
 import 'package:nutri/src/pages/root_page.dart';
 
 class Routes {
-  static String userAndOrder = "/:id";
+  // static String userAndOrder = "/:id";
 
   //TODO: Apareceu um bug de fluro, quando tento assim
   // static String userStore = "/user?=:id";
@@ -21,7 +21,8 @@ class Routes {
       return;
     });
 
-    router.define(RootPage.routeName, handler: RouteHandler.rootHandler);
-    router.define(userAndOrder, handler: userAndOrderHandler);
+    // router.define(RootPage.routeName, handler: RouteHandler.rootHandler);
+    // router.define(userAndOrder, handler: userAndOrderHandler);
+    router.define('/', handler: addServiceHandler);
   }
 }

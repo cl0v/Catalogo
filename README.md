@@ -1,16 +1,11 @@
-# nutri
+Quando algum serviço for selecionado, dará desconto nesses outros serviços...
+Serviços principais não serão aplicados desconto.
+Não exibir preço nos tiles, apenas fechar no final o valor e bouas
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+//Mais tarde, se for canhoto checkbox dfo lado esquerdo
+//Tela com metade de uma cor e metade da outra, qual ela toca sigifica q ela usa aquela mao pra usar o cel, normalmente
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+//Check box com caixa do lado direito

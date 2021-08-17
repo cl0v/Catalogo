@@ -1,5 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:nutri/src/features/service/src/pages.dart';
 
 import '/src/config/application.dart';
 import '/src/config/routes.dart';
@@ -29,7 +30,8 @@ class AppComponentState extends State<AppComponent> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      onGenerateRoute: Application.router.generator,
+      // onGenerateRoute: Application.router.generator,
+      home: AddNewServicePage(),
     );
     return app;
   }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'app.dart';
+
+//O app sofrerá uma migracao para se tornar software as a product
+
 //https://www.youtube.com/watch?v=CAYa9AQGtdU hosting deploy
 
 /*TODO:

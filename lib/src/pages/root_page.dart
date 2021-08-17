@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class RootPage extends StatefulWidget {
-  static String routeName = "/";
+  static String routeName = "/root";
   const RootPage({Key? key}) : super(key: key);
 
   @override
