@@ -1,8 +1,8 @@
 
-class TimeRangeModel {
+class TimeRange {
   String from;
   String to;
-  TimeRangeModel({
+  TimeRange({
     required this.from,
     required this.to,
   });

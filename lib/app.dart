@@ -1,10 +1,9 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:nutri/src/features/schedule/src/pages/scheduling.dart';
-import 'package:nutri/src/features/service/src/pages.dart';
+import 'package:nutri/src/features/service/service.dart';
 import 'package:nutri/src/features/service/src/widgets/service_list.dart';
 import 'package:nutri/src/features/worker/src/pages/create_worker.dart';
-
 import '/src/config/application.dart';
 import '/src/config/routes.dart';
 
