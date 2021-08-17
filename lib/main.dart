@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'app.dart';
 
 //O app sofrerá uma migracao para se tornar software as a product
+// Sempre priorizar a beleza da página de usuários . . . Mas não significa que pode lançar meio tosco.
+
 
 //https://www.youtube.com/watch?v=CAYa9AQGtdU hosting deploy
 

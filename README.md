@@ -1,7 +1,7 @@
 Quando algum serviço for selecionado, dará desconto nesses outros serviços...
 Serviços principais não serão aplicados desconto.
 Não exibir preço nos tiles, apenas fechar no final o valor e bouas
-
+Nao sou eu que decido se eh caro
 
 
 //Mais tarde, se for canhoto checkbox dfo lado esquerdo

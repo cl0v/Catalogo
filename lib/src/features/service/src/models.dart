@@ -23,18 +23,4 @@ class ServiceModel {
   /// EXP: Corte custa 15 + barba 5 = 20 reais, porém se for só barba custa 9
   /// Precisa definir um serviço principal, que não sofrerá desconto
   double discountOnSecondaryService;
-  
-}
-
-class WorkerModel {
-  //TODO: Nao preocupar muito com isso agora
-  String name;
-  //Poderá ter diferentes profissoes
-  String occupation;
-  String? description;
-  WorkerModel({
-    required this.name,
-    required this.occupation,
-    this.description,
-  });
 }

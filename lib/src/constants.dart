@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const defaultPadding = 20.0;
+const defaultPadding = 12.0;
 const cartBarHeight = 100.0;
 const headerHeight = 85.0;
 

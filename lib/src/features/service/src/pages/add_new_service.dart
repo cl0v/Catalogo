@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nutri/src/features/service/src/models.dart';
 import 'package:nutri/src/features/service/src/widgets/add_service_button.dart';
 
-//TODO: Service value simulator... permite a pessoa ver uma versão
-//de usuário para calcular o valor quando ela adiciona alguns servicos especificos
+// TODO: Service value simulator... permite a pessoa ver uma versão
+// de usuário para calcular o valor quando ela adiciona alguns servicos especificos
 
 class AddNewServicePage extends StatefulWidget {
   // final f = ServiceModel(
@@ -83,8 +83,9 @@ class _AddNewServicePageState extends State<AddNewServicePage> {
               title: Text('Definir como serviço principal'),
               subtitle: Text(
                 '*Só pode ter um serviço principal',
-              ), // Adicionar o ⚠️ para avisar que só pode ter um... futuramente caso ela marce, já vai ter salvo se ela tem algum e vai por ele como o principal.
-              //TODO: Entregar quando essa parte tiver pronta
+              ),
+              // Adicionar o ⚠️ para avisar que só pode ter um... futuramente caso ela marce, já vai ter salvo se ela tem algum e vai por ele como o principal.
+              // TODO: Entregar quando essa parte tiver pronta
             ),
 
             TextFormField(
