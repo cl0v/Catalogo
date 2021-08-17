@@ -1,5 +1,4 @@
 import 'services.dart';
-
 abstract class IProductRepository {
   ProductCreatorService get creator;
   ProductReaderService get reader;
