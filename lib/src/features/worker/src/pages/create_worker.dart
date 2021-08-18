@@ -55,6 +55,8 @@ class _CreateWorkerPageState extends State<CreateWorkerPage> {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme =  Theme.of(context)
+                    .textTheme;
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {},
@@ -77,7 +79,7 @@ class _CreateWorkerPageState extends State<CreateWorkerPage> {
                 controller: occupationController,
                 decoration: InputDecoration(
                     hintText: 'Designer de sobrancelhas',
-                    labelText: 'Sobre mim (Opcional)'),
+                    labelText: 'Profissão'),
               ),
               TextFormField(
                 controller: descriptionController,
@@ -91,8 +93,7 @@ class _CreateWorkerPageState extends State<CreateWorkerPage> {
               ),
               Text(
                 'Endereço',
-                style: Theme.of(context)
-                    .textTheme
+                style: textTheme
                     .headline6
                     ?.copyWith(fontSize: 18),
               ),
@@ -125,7 +126,7 @@ class _CreateWorkerPageState extends State<CreateWorkerPage> {
               // TextFormField(
               //   controller: adressCountryController,
               //   decoration: InputDecoration(hintText: 'BR', labelText: 'País'),
-              // ),
+              // ),     v  c             sdfdasf
 
               Divider(),
               SizedBox(
@@ -134,8 +135,7 @@ class _CreateWorkerPageState extends State<CreateWorkerPage> {
               //Dados para gerencia do tempo
               Text(
                 'Trabalho de:',
-                style: Theme.of(context)
-                    .textTheme
+                style: textTheme
                     .headline6
                     ?.copyWith(fontSize: 18),
               ),
@@ -169,8 +169,7 @@ class _CreateWorkerPageState extends State<CreateWorkerPage> {
               ),
               Text(
                 'Intervalo de almoço é de:',
-                style: Theme.of(context)
-                    .textTheme
+                style: textTheme
                     .headline6
                     ?.copyWith(fontSize: 18),
               ),

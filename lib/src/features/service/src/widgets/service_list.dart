@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:nutri/src/features/schedule/src/pages/scheduling.dart';
-import 'package:nutri/src/utils/navigator.dart';
 
-class ServiceList extends StatefulWidget {
-  ServiceList({Key? key}) : super(key: key);
+class ServicesList extends StatefulWidget {
+  ServicesList({Key? key}) : super(key: key);
 
   @override
-  _ServiceListState createState() => _ServiceListState();
+  _ServicesListState createState() => _ServicesListState();
 }
 
-class _ServiceListState extends State<ServiceList> {
+class _ServicesListState extends State<ServicesList> {
+//  TODO: Como vou receber os servicos
   final Map<String, bool> services = {
     'Cabelo': false,
     'Barba': false,
     'Bigode': false,
-    // TODO: Pedir para que o usuário não
-    // peça desconto ao encontrar com a pessoa, para isso terá politicar e termos de serviço.
     'Sobrancelha': false,
+    
   };
 
   //TODO: Implementar calculo de valor total
@@ -24,15 +22,7 @@ class _ServiceListState extends State<ServiceList> {
   @override
   Widget build(BuildContext context) {
     //TODO: Remover apenas esse scaffold e jogar o body como um widget que fica responsável por listar os servicos
-    return Scaffold(
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          push(context, SchedulingPage());
-        },
-        label: Text('Agendar horário'),
-        icon: Icon(Icons.timer),
-      ),
-      body: Column(
+    return Column(
         children: [
           ...List.generate(services.keys.length, (index) {
             final text = services.keys.toList()[index];
@@ -58,18 +48,17 @@ class _ServiceListState extends State<ServiceList> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.end,
+                // crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text('R\$', style: Theme.of(context).textTheme.headline6,),
-                  Text('15', style: Theme.of(context).textTheme.headline1,),//TODO: Corrigir essa tosquice
-                  Text(',00', style: Theme.of(context).textTheme.headline6,),
+                  Text('R\$', style: Theme.of(context).textTheme.headline4,),
+                  Text('15,00', style: Theme.of(context).textTheme.headline1,),//TODO: Corrigir essa tosquice
+                  // Text(',00', style: Theme.of(context).textTheme.headline6,),
                 ],
               )
             ],
           ),
           Spacer(),
         ],
-      ),
     );
   }
 }

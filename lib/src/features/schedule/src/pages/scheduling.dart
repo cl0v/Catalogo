@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+
+ //TODO: Fazer os botoes terem utilidades
+ //TODO: Criar lógica de agendamento funcional
+
 class SchedulingPage extends StatefulWidget {
   const SchedulingPage({Key? key}) : super(key: key);
 

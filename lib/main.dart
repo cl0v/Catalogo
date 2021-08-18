@@ -1,8 +1,31 @@
 import 'package:flutter/material.dart';
 
 import 'app.dart';
+// -> Lojista: DashBoard
+/*
+Páginas:
+Loja: 
+x - Criar servidor
+x - Criar serviço
+ - Notificações (Horarios marcados, Cancelamentos, Etc)
+ [- Agenda da pessoa para que ela possa verificar os horarios disponiveis
+ [- Página em que ela pode bloquear algum horario de atendimento pois ela já marcou por conta propria.
+ - Página que exibe a agenda de hoje (E de outros dias), para ela poder monitorar o que tem pra hoje (Saber horarios vagos, cancelamentos, etc)
 
-//O app sofrerá uma migracao para se tornar software as a product
+// Fechar agenda pode ser deixar intocavel a pessoa na lista
+
+Usuário:
+ - Lista de 'lojistas' cadastrados
+x - Lista de serviços no perfil do 'lojista' -> Selecionar os serviços que deseja
+x - Agendamento dos serviços selecionados.
+
+
+
+
+
+Exibir
+*/
+
 // Sempre priorizar a beleza da página de usuários . . . Mas não significa que pode lançar meio tosco.
 
 

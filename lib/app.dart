@@ -1,9 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:nutri/src/features/schedule/src/pages/scheduling.dart';
-import 'package:nutri/src/features/service/service.dart';
-import 'package:nutri/src/features/service/src/widgets/service_list.dart';
-import 'package:nutri/src/features/worker/src/pages/create_worker.dart';
+import 'package:nutri/src/features/worker/src/pages/dashboard.dart';
 import '/src/config/application.dart';
 import '/src/config/routes.dart';
 
@@ -33,7 +30,7 @@ class AppComponentState extends State<AppComponent> {
         primarySwatch: Colors.blue,
       ),
       // onGenerateRoute: Application.router.generator,
-      home: CreateWorkerPage(),
+      home: DashBoardPage(),
     );
     return app;
   }
