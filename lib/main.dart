@@ -1,6 +1,22 @@
 import 'package:flutter/material.dart';
-
 import 'app.dart';
+
+
+
+// 0.0.1 : Acompanhamento na agenda -> Adicionar algum naquele horário.
+// 0.0.2 : Cadastro de servicos em diante
+
+
+
+
+
+
+
+
+
+
+// Deixar as apenas os servidores adicionarem serviço
+
 // -> Lojista: DashBoard
 /*
 Páginas:

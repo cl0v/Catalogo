@@ -23,6 +23,8 @@ class Routes {
 
     // router.define(RootPage.routeName, handler: RouteHandler.rootHandler);
     // router.define(userAndOrder, handler: userAndOrderHandler);
-    router.define('/', handler: addServiceHandler);
+    router.define('/', handler: AdminRouteHandler.root);
+
+    router.define('admin', handler: AdminRouteHandler.root);
   }
 }

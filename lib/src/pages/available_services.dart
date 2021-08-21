@@ -1,7 +1,7 @@
 import 'package:backdrop/backdrop.dart';
 import 'package:flutter/material.dart';
-import 'package:nutri/src/features/schedule/src/pages/scheduling.dart';
-import 'package:nutri/src/features/service/src/widgets/service_list.dart';
+import 'package:nutri/src/features/worker/features/schedule/src/pages/scheduling.dart';
+import 'package:nutri/src/features/worker/features/service/src/widgets/service_list.dart';
 import 'package:nutri/src/utils/navigator.dart';
 
 import 'package:transparent_image/transparent_image.dart';

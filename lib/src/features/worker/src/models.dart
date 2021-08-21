@@ -1,5 +1,7 @@
-import 'package:nutri/src/helpers/adress.dart';
-import 'package:nutri/src/helpers/time_range.dart';
+import 'dart:convert';
+
+import 'package:nutri/src/models/adress.dart';
+import 'package:nutri/src/models/time_range.dart';
 
 //TODO: Nao preocupar muito com isso agora
 // Enviar algumas fotos de exemplo pra pessoa poder sacar como é o trabalho (MAX (9FOTOS))
@@ -33,4 +35,58 @@ class WorkerModel {
     required this.interval,
     this.description,
   });
+
+  Map<String, dynamic> toMap() {
+    return {
+      'name': name,
+      'occupation': occupation,
+      'adress': adress.toMap(),
+      'description': description,
+      'workingTime': workingTime.toMap(),
+      'interval': interval.toMap(),
+    };
+  }
+
+  factory WorkerModel.fromMap(Map<String, dynamic> map) {
+    return WorkerModel(
+      name: map['name'],
+      occupation: map['occupation'],
+      adress: Adress.fromMap(map['adress']),
+      description: map['description'],
+      workingTime: TimeRange.fromMap(map['workingTime']),
+      interval: TimeRange.fromMap(map['interval']),
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory WorkerModel.fromJson(String source) => WorkerModel.fromMap(json.decode(source));
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+  
+    return other is WorkerModel &&
+      other.name == name &&
+      other.occupation == occupation &&
+      other.adress == adress &&
+      other.description == description &&
+      other.workingTime == workingTime &&
+      other.interval == interval;
+  }
+
+  @override
+  int get hashCode {
+    return name.hashCode ^
+      occupation.hashCode ^
+      adress.hashCode ^
+      description.hashCode ^
+      workingTime.hashCode ^
+      interval.hashCode;
+  }
+
+  @override
+  String toString() {
+    return 'WorkerModel(name: $name, occupation: $occupation, adress: $adress, description: $description, workingTime: $workingTime, interval: $interval)';
+  }
 }
