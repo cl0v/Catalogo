@@ -36,7 +36,7 @@ class _CalendarPageState extends State<CalendarPage> {
         'Livia Amanda Viana\n > Corte de cabelo (Longo)\n > Unhas',
         startTime,
         startTime.add(const Duration(hours: 1, minutes: 20)),
-        const Color(0xFF0F8644),
+        const Color(0xFF0F8644), // A cor
         false,
       ),
     );

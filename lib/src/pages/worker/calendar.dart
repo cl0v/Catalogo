@@ -20,7 +20,9 @@ class _TableBasicsExampleState extends State<TableBasicsExample> {
         title: Text('Agenda'),
       ),
       body: TableCalendar(
-        
+        eventLoader: (d) {
+          return List.filled(3, 'Nome');
+        },
         firstDay: kFirstDay,
         lastDay: kLastDay,
         focusedDay: _focusedDay,
@@ -42,7 +44,6 @@ class _TableBasicsExampleState extends State<TableBasicsExample> {
             });
           }
         },
-       
         onPageChanged: (focusedDay) {
           // No need to call `setState()` here
           _focusedDay = focusedDay;
